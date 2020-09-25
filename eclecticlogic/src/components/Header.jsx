@@ -5,10 +5,10 @@ const Header = () => {
 
     return (
         <header>
-            <h1><a href="https://eclecticlogic/">EclecticLogic</a></h1>
+            <h1><a href="https://eclecticlogic.vercel.app/">EclecticLogic</a></h1>
             <div className="header-links">
-                <a href="https://eclecticlogic/contact">Contact</a>
-                <a href="https://eclecticlogic/about">About</a>
+                <a href="https://eclecticlogic.vercel.app/contact">Contact</a>
+                <a href="https://eclecticlogic.vercel.app/about">About</a>
                 <a href="https://eclectic-blog.vercel.app/">Blog</a>
             </div>
         </header>
