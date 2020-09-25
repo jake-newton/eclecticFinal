@@ -17,7 +17,7 @@ window.mobileCheck = function() {
   console.log("Is Mobile?:", check)
   if (!check) {
     console.log("rendering for desktop")
-    if (window.location.href == 'http://localhost:3000/') {
+    if (window.location.href == 'https://eclecticlogic.vercel.app/') {
       tl.to(".intro-img", { y: "0%", duration: 1});
       tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
       tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
@@ -29,7 +29,7 @@ window.mobileCheck = function() {
   }
   else {
     console.log("rendering for mobile")
-    if (window.location.href == 'http://localhost:3000/') {
+    if (window.location.href == 'https://eclecticlogic.vercel.app/') {
       tl.to(".intro-img", { y: "0%", duration: 1});
       tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
       tl.to(".slider", { y: "-150%", duration: 1.5, delay: 0.5 });
