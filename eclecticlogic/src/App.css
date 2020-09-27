@@ -211,7 +211,7 @@ header h1 a:hover {
   flex-direction: column;
 }
 .successful-submission {
-  background: rgb(128, 128, 128);
+  /* background: rgb(128, 128, 128); */
   display: none;
 }
 .successful-submission h1 {
