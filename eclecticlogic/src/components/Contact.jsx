@@ -6,6 +6,9 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import '../App.css';
+import '../Confetti.css'
+
+
 
 const myTheme = createMuiTheme({
   palette: {
@@ -78,12 +81,10 @@ const Contact = () => {
   const nameelemRef = useRef(null);
   const emailelemRef = useRef(null);
   const messageelemRef = useRef(null);
+  const emailvalidelemRef = useRef(null);
+  const successelemRef = useRef(null);
 
   console.log("nameref", nameelemRef)
-
-  // const [xname, setxname] = useState('')
-  // const [xemail, setxemail] = useState('')
-  // const [xmessage, setxmessage] = useState('')
 
   const classes = useStyles();
 
@@ -91,33 +92,35 @@ const Contact = () => {
     setInfo({...info, [event.target.name]: event.target.value})
   }
   
-  // useEffect(() => {
-  //   setxname(document.getElementById("validation-message-name"));
-  //   setxemail(document.getElementById("validation-message-email"));
-  //   setxmessage(document.getElementById("validation-message-message"));
-  //   console.log("xname", xname)
-  // }, [])
-  // console.log("xname", xname)
-
-
-
   const handleSubmit = event => {
+
+    function validateEmail(email) {
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+  }
+
     if (info.name == "") {
       nameelemRef.current.style.display = "block";
       console.log("nameref display", nameelemRef.current.style.display)
     } if (info.address == "") {
       emailelemRef.current.style.display = "block";
-    } if (info.email == "") {
+    }  if (info.email == "") {
       messageelemRef.current.style.display = "block";
-    } 
-    if (info.name !== "") {
+    } if (info.name !== "") {
       nameelemRef.current.style.display = "none";
       console.log("nameref display", nameelemRef.current.style.display)
     } if (info.address !== "") {
       emailelemRef.current.style.display = "none";
+      if (!validateEmail(info.address)) {
+        emailvalidelemRef.current.style.display = "block"
+      }
+    } if (validateEmail(info.address)) {
+      emailvalidelemRef.current.style.display = "none"
     } if (info.email !== "") {
       messageelemRef.current.style.display = "none";
-    } else {
+    } if (info.email !== '' & info.name !== '' & info.address !== '' & validateEmail(info.address)) {
+      successelemRef.current.style.display = "flex";
+      console.log("successelemRef display", successelemRef.current.style.display)
       event.preventDefault();
       console.log(info);
       axios
@@ -129,11 +132,33 @@ const Contact = () => {
       console.log(error)
       alert("Name and/or Password not recognized, please try again", error)
     })
+    
     }
   }
 
       return (
         <div className="Contact">
+        <div ref={successelemRef} className="successful-submission">
+          <div className="submission-text-div">
+            <h1>Submission Received</h1>
+            <h2>You're one step closer!</h2>
+          </div>  
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+          <div class="confetti"></div>
+        </div>
          <h1 className="contact-title">Send us a message</h1>
             <Paper className="contactForm" elevation={24}>
               <div className="topForm">
@@ -150,6 +175,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p ref={emailelemRef} className="validation-message-email">*Email is required*</p>
+                  <p ref={emailvalidelemRef} className="validation-message-email-invalid">*Valid Email is required*</p>
                   <TextField 
                     className={classes.field} 
                     name="address"

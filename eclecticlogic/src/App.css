@@ -210,6 +210,16 @@ header h1 a:hover {
   display: flex;
   flex-direction: column;
 }
+.successful-submission {
+  background: rgb(128, 128, 128);
+  display: none;
+}
+.successful-submission h1 {
+}
+.submission-text-div {
+  text-align: center;
+  margin: 5rem auto;
+}
 .contact-title {
   font-size: 2.5rem;
   text-align: center;
@@ -230,7 +240,7 @@ header h1 a:hover {
   color: red;
   display: none;
 }
-.validation-message-bottom {
+.validation-message-email-invalid {
   text-align: center;
   color: red;
   display: none;
