@@ -215,13 +215,33 @@ header h1 a:hover {
   text-align: center;
   margin: 3rem;
 }
+.validation-message-name {
+  text-align: center;
+  color: red;
+  display: none;
+}
+.validation-message-email {
+  text-align: center;
+  color: red;
+  display: none;
+}
+.validation-message-message {
+  text-align: center;
+  color: red;
+  display: none;
+}
+.validation-message-bottom {
+  text-align: center;
+  color: red;
+  display: none;
+}
 .contact-title-bottom {
   font-size: 2rem;
   text-align: center;
 }
 .contactForm {
   width: 75%;
-  height: 550px;
+  height: 600px;
   min-height: 200px;
   margin: auto;
   margin-top: 1rem;
@@ -254,7 +274,6 @@ header h1 a:hover {
 }
 .boxes .vision {
   font-size: 1.5em;
-
 }
 #top {
   border-top: 1px solid lightgreen;
@@ -262,8 +281,6 @@ header h1 a:hover {
   height: 50%;
   margin: 0% 10%;
   margin-bottom: 5%;
-
-
 }
 .boxes {
   text-align: center;

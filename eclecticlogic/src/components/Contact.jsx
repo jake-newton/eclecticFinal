@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import axios from 'axios';
 import {Paper, TextareaAutosize} from '@material-ui/core'
 import {TextField} from '@material-ui/core'
@@ -75,29 +75,61 @@ const useStyles = makeStyles((theme) => ({
 const Contact = () => { 
 
   const [info, setInfo] = useState({ 'name': '', 'address': '', 'email': ''})
+  const nameelemRef = useRef(null);
+  const emailelemRef = useRef(null);
+  const messageelemRef = useRef(null);
+
+  console.log("nameref", nameelemRef)
+
+  // const [xname, setxname] = useState('')
+  // const [xemail, setxemail] = useState('')
+  // const [xmessage, setxmessage] = useState('')
 
   const classes = useStyles();
 
   const changeHandler = event => {
     setInfo({...info, [event.target.name]: event.target.value})
   }
+  
+  // useEffect(() => {
+  //   setxname(document.getElementById("validation-message-name"));
+  //   setxemail(document.getElementById("validation-message-email"));
+  //   setxmessage(document.getElementById("validation-message-message"));
+  //   console.log("xname", xname)
+  // }, [])
+  // console.log("xname", xname)
+
+
 
   const handleSubmit = event => {
-    event.preventDefault();
-    console.log(info);
-    if (info.name == "" || info.address == "" || info.email == "") {
-      alert("Name, Email, and Body are required.")
+    if (info.name == "") {
+      nameelemRef.current.style.display = "block";
+      console.log("nameref display", nameelemRef.current.style.display)
+    } if (info.address == "") {
+      emailelemRef.current.style.display = "block";
+    } if (info.email == "") {
+      messageelemRef.current.style.display = "block";
+    } 
+    if (info.name !== "") {
+      nameelemRef.current.style.display = "none";
+      console.log("nameref display", nameelemRef.current.style.display)
+    } if (info.address !== "") {
+      emailelemRef.current.style.display = "none";
+    } if (info.email !== "") {
+      messageelemRef.current.style.display = "none";
+    } else {
+      event.preventDefault();
+      console.log(info);
+      axios
+        .post("https://eclectic-be.herokuapp.com/send", info)
+        .then(result => {
+        console.log(result)
+    })
+    .catch(error => {
+      console.log(error)
+      alert("Name and/or Password not recognized, please try again", error)
+    })
     }
-    axios
-      .post("https://eclectic-be.herokuapp.com/send", info)
-      .then(result => {
-      console.log(result)
-  })
-  .catch(error => {
-    console.log(error)
-    alert("Name and/or Password not recognized, please try again", error)
-  })
-
   }
 
       return (
@@ -105,24 +137,31 @@ const Contact = () => {
          <h1 className="contact-title">Send us a message</h1>
             <Paper className="contactForm" elevation={24}>
               <div className="topForm">
-                <TextField 
-                  className={classes.field} 
-                  name="name"
-                  id="outlined-basic" 
-                  label="Name*" 
-                  variant="outlined" 
-                  onChange={changeHandler}
-                />
-                <TextField 
-                  className={classes.field} 
-                  name="address"
-                  id="outlined-basic" 
-                  label="Email*" 
-                  variant="outlined" 
-                  onChange={changeHandler}
-                />
+                <div>
+                  <p ref={nameelemRef} className="validation-message-name">*Name is required*</p>
+                  <TextField 
+                    className={classes.field} 
+                    name="name"
+                    id="outlined-basic" 
+                    label="Name*" 
+                    variant="outlined" 
+                    onChange={changeHandler}
+                  />
+                </div>
+                <div>
+                  <p ref={emailelemRef} className="validation-message-email">*Email is required*</p>
+                  <TextField 
+                    className={classes.field} 
+                    name="address"
+                    id="outlined-basic" 
+                    label="Email*" 
+                    variant="outlined" 
+                    onChange={changeHandler}
+                  />
+                </div>
               </div>
               <div className="bottomForm">
+              <p ref={messageelemRef} className="validation-message-message">*Message is required*</p>
                 <TextField
                   className={classes.emailField}
                   name="email"
