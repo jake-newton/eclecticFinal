@@ -208,14 +208,24 @@ header h1 a:hover {
   min-height: 77.8vh;
   width: auto;
   display: flex;
+  flex-direction: column;
+}
+.contact-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 3rem;
+}
+.contact-title-bottom {
+  font-size: 2rem;
+  text-align: center;
 }
 .contactForm {
   width: 75%;
   height: 550px;
   min-height: 200px;
   margin: auto;
-  margin-top: 1%;
-  margin-bottom: 6%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 .topForm {
   /* padding-top: 5vh; */
@@ -351,9 +361,12 @@ footer img {
     display: flex;
     align-items: center;
   }
+  .company-desc-div h2 {
+    padding: 3%;
+  }
   .company-description{
     font-size: 1rem;
-    padding: .5rem;
+    padding: 0;
     text-align: center;
     border-bottom: none;
   }
@@ -401,23 +414,25 @@ footer img {
   .footer-img-div {
     width: 30%;
   }
-  footer img {
-    width: 70%;
-    height: 80%;
-    margin-left: 15%;
-    
+  .footer-img-div {
+    display: none;
   }
   .footer-links {
-    width: 30%;
+    width: 50%;
     margin-right: 5%;
   }
   .copyright {
     width: 30%;
+    margin-left: 1rem;
   }
   .footer-links a {
   }
   .Contact {
     min-height: auto;
+  }
+  .contact-title-bottom {
+    font-size: 1rem;
+    text-align: center;
   }
   .devpic {
       display: none;

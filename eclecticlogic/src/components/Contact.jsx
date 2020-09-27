@@ -102,6 +102,7 @@ const Contact = () => {
 
       return (
         <div className="Contact">
+         <h1 className="contact-title">Send us a message</h1>
             <Paper className="contactForm" elevation={24}>
               <div className="topForm">
                 <TextField 
@@ -143,6 +144,8 @@ const Contact = () => {
                 </Button>
               </div>           
             </Paper>
+            <h1 className="contact-title-bottom">Direct Phone: (520) 256-9356</h1>
+            <h1 className="contact-title-bottom">Direct Email: eclecticlogic.business@gmail.com</h1>
         </div>
       )
     }
