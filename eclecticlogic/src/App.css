@@ -2,6 +2,19 @@
   background: rgb(255, 255, 255);
   font-family: 'Libre Baskerville', serif;
 }
+.company-desc-div {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: space-evenly;
+}
+.company-description {
+  border-bottom: 1px solid rgb(22, 255, 22);
+  padding: 2rem 2rem 1rem 2rem;
+}
+.company-desc-div h2 {
+  margin: auto;
+}
 .top-line {
   height: 1px;
   width: 90%;
@@ -11,12 +24,14 @@
 .carousel {
   max-width: 70% !important;
   margin: auto;
-  margin-top: 2rem;
   z-index: 0;
+
 }
 .carousel div {
-  background: white;
+  background: rgb(53, 53, 53);
+  border-radius: 10px;
   max-height: 75vh;
+  box-shadow: 10px 10px 10px 10px #5e5e5e;
 }
 .carousel-image {
   object-fit: fill;
@@ -26,12 +41,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  background: ghostwhite;
+  margin-bottom: 1rem;
+  box-shadow: 5px 5px 8px #2e2e2e;
 }
 header h1 {
   margin-left: 2rem;
   align-items: center;
   margin-top: 1rem;
+  font-size: 3rem;
+  border-bottom: 1px solid rgb(203, 112, 255);
+  box-shadow: 0 4px 2px -2px rgb(216, 255, 212);
 }
 header h1 a {
   text-decoration: none;
@@ -60,9 +80,8 @@ header h1 a:hover {
 .header-links a {
   text-decoration: none;
   color: rgb(39, 39, 39);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
-
 .header-links a:hover {
     color: rgb(54, 197, 54);
     -webkit-transition: color 300ms linear;
@@ -117,6 +136,11 @@ header h1 a:hover {
   flex-direction: column;
   margin-bottom: 5rem;
   margin-top: 5rem;
+  background: ghostwhite;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px #5e5e5e;
+
 }
 .main-title {
   font-size: 3rem;
@@ -264,7 +288,7 @@ footer {
   margin-top: 4rem;
   justify-content: space-between;
   align-items: center;
-  background: rgb(0, 0, 0);
+  background: rgb(26, 26, 26);
 }
 .footer-img-div {
   width: 19rem;
@@ -298,12 +322,22 @@ footer img {
 }
 
 @media only screen and (max-width: 830px) {
+  header {
+    justify-content: space-evenly
+  }
+  header h1 {
+    margin-left: 0;
+  }
   header h1 a {
     font-size: 1.5rem;
   }
   .header-links {
-    min-width: 60%;
+    width: 12rem;
     margin-right: 1rem;
+    margin: 0;
+  }
+  .header-links a {
+    font-size: 1rem;
   }
   .intro-text {
     margin-left: 10%;
@@ -312,15 +346,27 @@ footer img {
   .hide span img {
     display: none;
   }
+  .company-desc-div {
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+  }
+  .company-description{
+    font-size: 1rem;
+    padding: .5rem;
+    text-align: center;
+    border-bottom: none;
+  }
   .carousel {
     max-width: 100% !important;
   }
   .landing-container {
-    width: 95%;
+    width: 80%;
   }
   .main-title {
     font-size: 2rem;
     margin-bottom: 2rem;
+    text-align: center;
   }
   .title-div {
     display: flex;

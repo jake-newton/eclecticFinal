@@ -6,7 +6,13 @@ const Landing = () => {
 
     return (
             <div className="Landing">
-                <div className="top-line"></div>
+                <div className="company-desc-div">
+                    <h1 className="company-description">Consulting</h1>
+                    <h2>-</h2>
+                    <h1 className="company-description">Web Design</h1>
+                    <h2>-</h2>
+                    <h1 className="company-description">Web Development</h1>
+                </div>
                 <Carousel />
                 <div className="landing-container">
                     <h1 className="main-title">Our Three Step Process</h1>

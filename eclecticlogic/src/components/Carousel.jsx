@@ -1,10 +1,10 @@
 import React from "react";
-import AutoplaySlider from 'react-awesome-slider';
+import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import "../App.css"
 
 const Carousel = () => (
-    <AutoplaySlider 
+    <AwesomeSlider 
     className="carousel"  
     bullets={false}     
     play={true}
@@ -16,7 +16,7 @@ const Carousel = () => (
         <div data-src={require("../images/portfolioSnap.PNG")}></div>
         <div data-src={require("../images/updateddbArch.PNG")}></div>
         <div data-src={require("../images/portfolioSnip2.PNG")}></div>
-    </AutoplaySlider>
+    </AwesomeSlider>
   )
   
 export default Carousel
