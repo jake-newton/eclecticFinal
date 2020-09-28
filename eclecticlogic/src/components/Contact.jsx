@@ -145,6 +145,7 @@ const Contact = () => {
             <h1>Submission Received</h1>
             <h2>You're one step closer!</h2>
           </div>  
+          {/* <div class="confetti"></div>
           <div class="confetti"></div>
           <div class="confetti"></div>
           <div class="confetti"></div>
@@ -158,8 +159,7 @@ const Contact = () => {
           <div class="confetti"></div>
           <div class="confetti"></div>
           <div class="confetti"></div>
-          <div class="confetti"></div>
-          <div class="confetti"></div>
+          <div class="confetti"></div> */}
         </div>
          <h1 ref={titleelemRef} className="contact-title">Send us a message</h1>
             <Paper className="contactForm" elevation={24}>
