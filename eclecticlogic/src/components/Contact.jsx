@@ -83,6 +83,7 @@ const Contact = () => {
   const messageelemRef = useRef(null);
   const emailvalidelemRef = useRef(null);
   const successelemRef = useRef(null);
+  const titleelemRef = useRef(null);
 
   console.log("nameref", nameelemRef)
 
@@ -119,7 +120,8 @@ const Contact = () => {
     } if (info.email !== "") {
       messageelemRef.current.style.display = "none";
     } if (info.email !== '' & info.name !== '' & info.address !== '' & validateEmail(info.address)) {
-      successelemRef.current.style.display = "flex";
+      successelemRef.current.style.display = "block";
+      titleelemRef.current.style.display = "none";
       console.log("successelemRef display", successelemRef.current.style.display)
       event.preventDefault();
       console.log(info);
@@ -159,7 +161,7 @@ const Contact = () => {
           <div class="confetti"></div>
           <div class="confetti"></div>
         </div>
-         <h1 className="contact-title">Send us a message</h1>
+         <h1 ref={titleelemRef} className="contact-title">Send us a message</h1>
             <Paper className="contactForm" elevation={24}>
               <div className="topForm">
                 <div>

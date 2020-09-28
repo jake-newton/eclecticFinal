@@ -215,6 +215,10 @@ header h1 a:hover {
   display: none;
 }
 .successful-submission h1 {
+  font-weight: bold;
+}
+.successful-submission h2 {
+  font-weight: bold;
 }
 .submission-text-div {
   text-align: center;
