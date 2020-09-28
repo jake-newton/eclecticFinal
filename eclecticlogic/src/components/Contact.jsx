@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Contact = () => { 
 
-  const [info, setInfo] = useState({ 'name': '', 'address': '', 'email': ''})
+  const [info, setInfo] = useState({ 'name': '', 'email': '', 'message': ''})
   const nameelemRef = useRef(null);
   const emailelemRef = useRef(null);
   const messageelemRef = useRef(null);
@@ -103,23 +103,23 @@ const Contact = () => {
     if (info.name == "") {
       nameelemRef.current.style.display = "block";
       console.log("nameref display", nameelemRef.current.style.display)
-    } if (info.address == "") {
+    } if (info.email == "") {
       emailelemRef.current.style.display = "block";
-    }  if (info.email == "") {
+    }  if (info.message == "") {
       messageelemRef.current.style.display = "block";
     } if (info.name !== "") {
       nameelemRef.current.style.display = "none";
       console.log("nameref display", nameelemRef.current.style.display)
-    } if (info.address !== "") {
+    } if (info.email !== "") {
       emailelemRef.current.style.display = "none";
-      if (!validateEmail(info.address)) {
+      if (!validateEmail(info.email)) {
         emailvalidelemRef.current.style.display = "block"
       }
-    } if (validateEmail(info.address)) {
+    } if (validateEmail(info.email)) {
       emailvalidelemRef.current.style.display = "none"
-    } if (info.email !== "") {
+    } if (info.message !== "") {
       messageelemRef.current.style.display = "none";
-    } if (info.email !== '' & info.name !== '' & info.address !== '' & validateEmail(info.address)) {
+    } if (info.message !== '' & info.name !== '' & info.email !== '' & validateEmail(info.email)) {
       successelemRef.current.style.display = "block";
       titleelemRef.current.style.display = "none";
       console.log("successelemRef display", successelemRef.current.style.display)
@@ -180,7 +180,7 @@ const Contact = () => {
                   <p ref={emailvalidelemRef} className="validation-message-email-invalid">*Valid Email is required*</p>
                   <TextField 
                     className={classes.field} 
-                    name="address"
+                    name="email"
                     id="outlined-basic" 
                     label="Email*" 
                     variant="outlined" 
@@ -192,7 +192,7 @@ const Contact = () => {
               <p ref={messageelemRef} className="validation-message-message">*Message is required*</p>
                 <TextField
                   className={classes.emailField}
-                  name="email"
+                  name="message"
                   id="outlined-multiline-static"
                   label="Message*"
                   multiline
