@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react';
 import axios from 'axios';
-import {Paper, TextareaAutosize} from '@material-ui/core'
+import {Paper} from '@material-ui/core'
 import {TextField} from '@material-ui/core'
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
@@ -85,7 +85,7 @@ const Contact = () => {
   const successelemRef = useRef(null);
   const titleelemRef = useRef(null);
 
-  console.log("nameref", nameelemRef)
+  // console.log("nameref", nameelemRef)
 
   const classes = useStyles();
 
@@ -96,20 +96,20 @@ const Contact = () => {
   const handleSubmit = event => {
 
     function validateEmail(email) {
-      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const re = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(String(email).toLowerCase());
   }
 
-    if (info.name == "") {
+    if (info.name === "") {
       nameelemRef.current.style.display = "block";
-      console.log("nameref display", nameelemRef.current.style.display)
-    } if (info.email == "") {
+      // console.log("nameref display", nameelemRef.current.style.display)
+    } if (info.email === "") {
       emailelemRef.current.style.display = "block";
-    }  if (info.message == "") {
+    }  if (info.message === "") {
       messageelemRef.current.style.display = "block";
     } if (info.name !== "") {
       nameelemRef.current.style.display = "none";
-      console.log("nameref display", nameelemRef.current.style.display)
+      // console.log("nameref display", nameelemRef.current.style.display)
     } if (info.email !== "") {
       emailelemRef.current.style.display = "none";
       if (!validateEmail(info.email)) {
@@ -122,16 +122,16 @@ const Contact = () => {
     } if (info.message !== '' & info.name !== '' & info.email !== '' & validateEmail(info.email)) {
       successelemRef.current.style.display = "block";
       titleelemRef.current.style.display = "none";
-      console.log("successelemRef display", successelemRef.current.style.display)
+      // console.log("successelemRef display", successelemRef.current.style.display)
       event.preventDefault();
-      console.log(info);
+      // console.log(info);
       axios
         .post("https://eclectic-be.herokuapp.com/send", info)
         .then(result => {
-        console.log(result)
+        // console.log(result)
     })
     .catch(error => {
-      console.log(error)
+      // console.log(error)
       alert("Name and/or Password not recognized, please try again", error)
     })
     
