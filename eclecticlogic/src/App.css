@@ -25,7 +25,6 @@
   max-width: 70% !important;
   margin: auto;
   z-index: 0;
-
 }
 .carousel div {
   background: rgb(53, 53, 53);
@@ -64,12 +63,6 @@ header h1 a:hover {
   -ms-transition: color 300ms linear;
   transition: color 300ms linear;
 }
-/* header h1 a:hover {
-  font-size: 2rem;
-  -webkit-transition: font-size 300ms linear;
-  -ms-transition: font-size 300ms linear;
-  transition: font-size 300ms linear;
-} */
 .header-links {
   width: 20%;
   margin-right: 2rem;
@@ -109,13 +102,11 @@ header h1 a:hover {
   height: 200%;
   transform: translateY(100%);
 }
-
 .intro-text {
   color: rgb(233, 233, 233);
   font-family: "Heebo", sans-serif;
   font-size: 3rem;
 }
-
 .hide {
   background: black;
   overflow: hidden;
@@ -129,8 +120,6 @@ header h1 a:hover {
 }
 .landing-container {
   width: 80%;
-  /* border-left: 1px solid #b44ed3;
-  border-right: 1px solid #b44ed3; */
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -140,7 +129,6 @@ header h1 a:hover {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 2px 2px 2px 2px #5e5e5e;
-
 }
 .main-title {
   font-size: 3rem;
@@ -157,7 +145,6 @@ header h1 a:hover {
   border-bottom: 1px solid #b44ed3;
 }
 .w3-border {
-  /* margin: 20% 0; */
   background-color: #272727;
   border-radius: 20px;
   height: 2rem;
@@ -211,7 +198,6 @@ header h1 a:hover {
   flex-direction: column;
 }
 .successful-submission {
-  /* background: rgb(128, 128, 128); */
   position: absolute;
   display: none;
   z-index: 1;
@@ -223,7 +209,6 @@ header h1 a:hover {
 .successful-submission h2 {
   font-weight: bold;
   font-size: 2.5rem;
-
 }
 .submission-text-div {
   text-align: center;
@@ -267,10 +252,8 @@ header h1 a:hover {
   margin-bottom: 2rem;
 }
 .topForm {
-  /* padding-top: 5vh; */
   display: flex;
   justify-content: space-evenly;
-  /* background-color: red; */
   height: 20%;
   align-items: center;
 }
@@ -280,7 +263,6 @@ header h1 a:hover {
   width: auto;
 }
 .About {
-  /* height: 77.8vh; */
   font-family: 'Libre Baskerville', serif;
   margin-top: 5%;
 }
@@ -485,5 +467,4 @@ footer img {
     .vision {
       min-width: 90%;
     }
-
 }
