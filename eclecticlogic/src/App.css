@@ -4,17 +4,15 @@
 }
 .company-desc-div {
   display: flex;
-  width: 70%;
-  margin: auto;
-  justify-content: space-evenly;
+  padding: 2em; 
+  /* margin-left: 10em;
+  margin-right: 10em; */
+  justify-content: space-around;
 }
 .company-description {
-  border-bottom: 1px solid rgb(22, 255, 22);
-  padding: 2rem 2rem 1rem 2rem;
+  margin: 5px;
 }
-.company-desc-div h2 {
-  margin: auto;
-}
+
 .top-line {
   height: 1px;
   width: 90%;
@@ -118,7 +116,7 @@ header h1 a:hover {
 .hide span img {
   margin-right: 2rem;
 }
-.landing-container {
+.landing-content {
   width: 80%;
   margin: auto;
   display: flex;
@@ -374,13 +372,9 @@ footer img {
     display: none;
   }
   .company-desc-div {
-    max-width: 90%;
-    display: flex;
-    align-items: center;
+
   }
-  .company-desc-div h2 {
-    padding: 3%;
-  }
+
   .company-description{
     font-size: 1rem;
     padding: 0;
@@ -388,13 +382,13 @@ footer img {
     border-bottom: none;
   }
   .carousel {
-    max-width: 100% !important;
+    max-width: 100%;
   }
   .landing-container {
     width: 80%;
   }
   .main-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     text-align: center;
   }
@@ -404,10 +398,12 @@ footer img {
     flex-direction: column;
   }
   .title {
+    font-size: 1.25rem;
     margin-left: 0;
-    width: 50%;
+    width: 80%;
     border-bottom: 1px solid #b44ed3;
   }
+
   .w3-border {
     width: 40%;
     margin-left: 6rem;
@@ -425,6 +421,10 @@ footer img {
 .content {
   display: flex;
   flex-wrap: wrap;
+}
+.content p {
+  font-size: 1rem;
+
 }
   footer {
   }
