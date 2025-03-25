@@ -211,8 +211,7 @@ const Contact = () => {
                 </Button>
               </div>           
             </Paper>
-            <h1 className="contact-title-bottom">Direct Phone: (520) 256-9356</h1>
-            <h1 className="contact-title-bottom">Direct Email: eclecticlogic.business@gmail.com</h1>
+            <h1 className="contact-title-bottom">Direct Email: sales@eclecticlogic.org</h1>
         </div>
       )
     }
