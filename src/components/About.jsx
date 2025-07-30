@@ -18,11 +18,12 @@ const About = () => {
                 </div>
                 <div id="top">
                     <div className="boxes">
-                        <p className="vision"><a href="https://eclecticlogic.org/Connor">Connor</a></p>
                         <p className="vision"><a href="https://jake-newton.github.io">Jake</a></p>
+                        <img className="devpic" alt="Jake" src={require("../images/Jake.jpg")} /> 
                     </div>
                     {/* <div className="boxes"> */}
-                        <img className="devpic" alt="The Developer" src={require("../images/cs1.jpg")} />           
+                        <p className="vision"><a href="https://eclecticlogic.org/Connor">Connor</a></p>
+                        <img className="devpic" alt="Connor" src={require("../images/cs1.jpg")} />           
                     {/* </div> */}
                 </div>
             </div>    

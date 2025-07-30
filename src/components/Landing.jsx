@@ -55,13 +55,11 @@ const Landing = () => {
                         </div>
                     </div>
                 </div>
-                <section class="bg-blue-600 text-white py-16 px-6">
-                    <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-3xl font-bold mb-4">Let's Build Your Solution</h2>
-                    <p class="mb-6 text-lg">Whether it's setting up secure networks, designing efficient systems, or analyzing complex data—we're ready to help.</p>
-                    <a href="mailto:jake.newton@eclecticlogic.com" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition">Contact Us Today</a>
-                    </div>
-                </section>
+                <div className="landing-content">
+                    <h1 className="main-title">Let's Build Your Solution</h1>
+                    <p>Whether it's setting up secure networks, designing efficient systems, or analyzing complex data—we're ready to help.</p>
+                    <a href="mailto:jake.newton@eclecticlogic.com">Contact Us Today</a>
+                </div>
             </div>    
             
     )
