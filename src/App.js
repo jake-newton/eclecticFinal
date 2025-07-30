@@ -5,7 +5,9 @@ import Header from "./components/Header"
 import Landing from "./components/Landing"
 import About from "./components/About"
 import Contact from "./components/Contact"
+import Connor from "./components/Connor"
 import History from "./utils/History";
+import Services from "./components/Services"
 import './App.css';
 import gsap from "gsap";
   
@@ -69,6 +71,8 @@ function App() {
               <Route exact path="/" component={Landing} />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
+              <Route path="/services" component={Services} />
+              <Route path="/connor" component={Connor} />
             </Switch>
           <Footer />
       </Router>
