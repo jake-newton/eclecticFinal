@@ -17,6 +17,10 @@ const About = () => {
             </div>
             <div id="top">
                 <div className="boxes">
+                    <p className="vision">Xue</p>
+                    <p>CEO and Data Analyst</p>
+                </div>
+                <div className="boxes">
                     <p className="vision"><a href="https://jake-newton.github.io">Jake</a></p>
                     <p>Cyber Systems Engineer</p>
                     <img className="devpic" alt="Jake" src={require("../images/Jake.jpg")} /> 
@@ -25,7 +29,11 @@ const About = () => {
                     <p className="vision"><a href="https://eclecticlogic.org/Connor">Connor</a></p>
                     <p>Front-End Developer and Founder</p>
                     <img className="devpic" alt="Connor" src={require("../images/cs1.jpg")} /> 
-                </div>           
+                </div>
+                <div className="boxes">
+                    <p className="vision">Colton</p>
+                    <p>Project Manager</p>
+                </div>
             </div>
         </div>    
     );
