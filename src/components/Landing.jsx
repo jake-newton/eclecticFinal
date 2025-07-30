@@ -11,8 +11,8 @@ const Landing = () => {
                     <h1 className="company-description">Design</h1>
                     <h1 className="company-description">Development</h1>
                 </div>
-                <div>
-                    <h1 className="company-description">Eclectic Logic LLC</h1>
+                <div className="content-card">
+                    <h1 className="main-title">Eclectic Logic LLC</h1>
                     <p>Design, Consulting, and Development of Modern Web & Tech Solutions in Tucson & Phoenix</p>
                 </div>
                 <Carousel />
