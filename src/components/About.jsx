@@ -19,6 +19,7 @@ const About = () => {
                 <div id="top">
                     <div className="boxes">
                         <p className="vision"><a href="https://eclecticlogic.org/Connor">Connor</a></p>
+                        <p className="vision"><a href="https://jake-newton.github.io">Jake</a></p>
                     </div>
                     {/* <div className="boxes"> */}
                         <img className="devpic" alt="The Developer" src={require("../images/cs1.jpg")} />           

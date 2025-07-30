@@ -7,6 +7,7 @@ const Header = () => {
         <header>
             <h1><a href="https://eclecticlogic.org/">EclecticLogic</a></h1>
             <div className="header-links">
+                <a href="https://eclecticlogic.org/services">Contact</a>
                 <a href="https://eclecticlogic.org/contact">Contact</a>
                 <a href="https://eclecticlogic.org/about">About</a>
                 <a href="https://eclectic-blog.vercel.app/">Blog</a>
