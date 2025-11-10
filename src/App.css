@@ -1,7 +1,33 @@
 .App {
   background: rgb(255, 255, 255);
   font-family: 'Libre Baskerville', serif;
+  min-height: 90vh;
+  /* padding-bottom: 5rem; */
+  /* max-height: auto; */
 }
+
+.Landing{
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  max-width: 65%;
+  margin: auto;
+}
+
+.Contact{
+  min-height: 100%;
+}
+
+.py-20.px-6{
+  min-height: 100%;
+  max-width: 65%;
+  margin: auto;
+}
+
+.Connor{
+  min-height: 100%;
+}
+
 .company-desc-div {
   display: flex;
   padding: 2em; 
@@ -10,7 +36,6 @@
   justify-content: space-around;
 }
 .company-description {
-  margin: 5px;
 }
 
 .top-line {
@@ -23,6 +48,8 @@
   max-width: 70% !important;
   margin: auto;
   z-index: 0;
+  margin-bottom: 5rem;
+
 }
 .carousel div {
   background: rgb(53, 53, 53);
@@ -39,8 +66,8 @@ header {
   justify-content: space-between;
   align-items: center;
   background: ghostwhite;
-  margin-bottom: 1rem;
   box-shadow: 5px 5px 8px #2e2e2e;
+  min-height: 10vh;
 }
 header h1 {
   margin-left: 2rem;
@@ -122,11 +149,12 @@ header h1 a:hover {
   display: flex;
   flex-direction: column;
   margin-bottom: 5rem;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   background: ghostwhite;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 2px 2px 2px 2px #5e5e5e;
+  text-align: center;
 }
 .main-title {
   font-size: 3rem;
@@ -138,7 +166,6 @@ header h1 a:hover {
   align-items: center;
 }
 .title {
-  margin-left: 10rem;
   width: 20rem;
   border-bottom: 1px solid #b44ed3;
 }
@@ -173,25 +200,35 @@ header h1 a:hover {
   height: 100%;
   width: 75%;
 }
+
+.w3-4 {
+  background-color: #9a32b9;
+  border: 1px;
+  size: 1px;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+}
 .content-card {
   padding: 2% 5%;
   margin: 2rem;
-  width: 75%;
-  margin: auto;
 }
 .landing-container i {
   max-width: 25%;
   padding-right: 2rem;
+
 }
 .content {
   display: flex;
 }
 .content p{
   font-size: 1.25rem;
+  padding-left: 2rem;
 }
 .Contact {
   min-height: 77.8vh;
-  width: auto;
+  max-width: 65%;
+  margin: auto;
   display: flex;
   flex-direction: column;
 }
@@ -263,6 +300,9 @@ header h1 a:hover {
 .About {
   font-family: 'Libre Baskerville', serif;
   margin-top: 5%;
+  margin: auto;
+  max-width: 65%;
+  text-align: center;
 }
 .About-Title {
   font-size: 3rem;
@@ -277,17 +317,16 @@ header h1 a:hover {
 #top {
   border-top: 1px solid lightgreen;
   display: flex;
+  justify-content: space-between;
   height: 50%;
-  margin: 0% 10%;
-  margin-bottom: 5%;
+  /* margin-bottom: 5%; */
+  width: 100%;
 }
 .boxes {
-  text-align: center;
-  justify-content: center;
-  width: 40%;
   height: 80%;
   margin: auto;
   margin-top: 2%;
+  
 }
 .boxes p {
   font-size: 1.25em;
@@ -297,11 +336,13 @@ header h1 a:hover {
   color: rgb(120, 68, 150);
 }
 .devpic {
-  min-width: 350px;
+
+  /* min-width: 350px;
   max-width: 500px;
   margin-top: 5%;
   min-height: 80px;
-  max-height: 800px
+  max-height: 800px; */
+  width: 70%;
 }
 footer {
   position: relative;
@@ -309,9 +350,9 @@ footer {
   bottom: 0;
   overflow: hidden;
   display: flex;
-  height: 6rem;
+  height: 10vh;
   width: 100%;
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
   justify-content: space-between;
   align-items: center;
   background: rgb(26, 26, 26);
@@ -349,7 +390,7 @@ footer img {
   transition: color 300ms linear;
 }
 
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 850px) {
   header {
     justify-content: space-evenly
   }
@@ -402,7 +443,6 @@ footer img {
   }
   .title {
     font-size: 1.25rem;
-    margin-left: 0;
     width: 80%;
     border-bottom: 1px solid #b44ed3;
   }
@@ -461,8 +501,8 @@ footer img {
       font-size: 2rem;
     }
     .boxes {
-      font-size: 1em;
-      min-width: 90%;
+      font-size: .6em;
+      /* min-width: 90%; */
   }
   #top {
       width: auto

@@ -64,9 +64,10 @@ if (window.location.href === 'http://localhost:3000/') {
 
 function App() {
   return (
-    <div className="App">
-      <Router history={History}>
-          <Header />
+    <>
+      <div className="App">
+        <Router history={History}>
+            <Header />
             <Switch>
               <Route exact path="/" component={Landing} />
               <Route path="/about" component={About} />
@@ -74,9 +75,10 @@ function App() {
               <Route path="/services" component={Services} />
               <Route path="/connor" component={Connor} />
             </Switch>
-          <Footer />
-      </Router>
-    </div>
+        </Router>
+      </div>
+      <Footer />
+    </>
   );
 }
 

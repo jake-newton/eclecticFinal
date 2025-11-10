@@ -19,6 +19,7 @@ const About = () => {
                 <div className="boxes">
                     <p className="vision">Xue</p>
                     <p>CEO and Data Analyst</p>
+                    <img className="devpic" alt="Connor" src={require("../images/genericimg.jpg")} />
                 </div>
                 <div className="boxes">
                     <p className="vision"><a href="https://jake-newton.github.io">Jake</a></p>
@@ -27,12 +28,13 @@ const About = () => {
                 </div>
                 <div className="boxes">
                     <p className="vision"><a href="https://eclecticlogic.org/Connor">Connor</a></p>
-                    <p>Web Developer and Founder</p>
+                    <p>Developer and Founder</p>
                     <img className="devpic" alt="Connor" src={require("../images/cs5.jpg")} /> 
                 </div>
                 <div className="boxes">
                     <p className="vision">Colton</p>
                     <p>Project Manager</p>
+                    <img className="devpic" alt="Connor" src={require("../images/genericimg.jpg")} />
                 </div>
             </div>
         </div>    
