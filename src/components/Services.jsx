@@ -13,6 +13,10 @@ const Services = () => {
                 <p>Design, configuration, and optimization of physical and virtual networks for businesses and homes.</p>
                 </div>
                 <div className="title-div">
+                <h2 className="title">Web Development</h2>
+                <p>UX Design, frontend and backend website devlopment that is scalable, and mobile/tablet compatible.</p>
+                </div>
+                <div className="title-div">
                 <h2 className="title">Server Infrastructure</h2>
                 <p>Consulting and implementation of physical and virtual server environments tailored to your needs.</p>
                 </div>

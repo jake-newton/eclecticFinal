@@ -17,7 +17,7 @@ const Landing = () => {
                 </div>
                 <Carousel />
                 <div className="landing-content">
-                    <h1 className="main-title">Our Three Step Process</h1>
+                    <h1 className="main-title">Our Four Step Process</h1>
                     <div className="content-card">
                         <div className="title-div">
                             <h1 className="title">Step 1: Consult</h1>
@@ -43,15 +43,27 @@ const Landing = () => {
                         </div>
                     </div>
                     <div className="content-card">
-                    <div className="title-div">
-                        <h1 className="title">Step 3: Develop</h1>
-                        <div className="w3-border">
-                            <div className="w3-3"/>
+                        <div className="title-div">
+                            <h1 className="title">Step 3: Develop</h1>
+                            <div className="w3-border">
+                                <div className="w3-3"/>
+                            </div>
                         </div>
-                    </div>
+                            <div className="content">
+                                <i className="fas fa-code fa-4x"></i>
+                                <p>Implementation of secure and scalable systems including servers, websites, virtual machines, databases, and analytics platforms—optimized and future-ready.</p>
+                            </div>
+                        </div>
+                        <div className="content-card">
+                        <div className="title-div">
+                            <h1 className="title">Step 4: Deploy</h1>
+                            <div className="w3-border">
+                                <div className="w3-4"/>
+                            </div>
+                        </div>
                         <div className="content">
-                            <i className="fas fa-code fa-4x"></i>
-                            <p>Implementation of secure and scalable systems including servers, virtual machines, databases, and analytics platforms—optimized and future-ready.</p>
+                            <i className="fa fa-cloud-upload fa-4x"></i>
+                            <p>We communicate with you to make deployment of your solutions seamless, and fast.</p>
                         </div>
                     </div>
                 </div>
