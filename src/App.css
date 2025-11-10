@@ -317,22 +317,25 @@ footer {
   background: rgb(26, 26, 26);
 }
 .footer-img-div {
-  width: 19rem;
+  width: 10%;
 }
+
 footer img {
-  width: 12rem;
-  margin-left: 2rem;
+  width: 10rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .copyright {
-  width: 17rem;
+  width: 10%;
   text-align: center;
   color: white;
 }
 .footer-links {
-  width: 17rem;
+  width: 10%;
   text-align: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-right: 2rem;
 }
 .footer-links a {
