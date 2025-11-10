@@ -9,7 +9,7 @@ const About = () => {
             </div>
             <div id="top">
                 <div className="boxes">
-                    <p className="vision">The most exciting part of the modern Web is it's ability to provide visibility and exposure to anyone with the capability of developing a website. This visibility and exposure should be extended to everyone, not just those fluent in website design and development. <strong>Everyone should have the ability to pioneer this new frontier.</strong></p>
+                    <p className="vision">The most exciting part of the modern Web is it's ability to provide visibility and exposure to anyone with the capability of developing a website. However, we believe this visibility and exposure should extend to anyone that wants to use it to better themselves, their community, or the world, not just those fluent in website design and development. <strong>Everyone should have the ability to pioneer this new frontier, and we intend to deliver that ability straight to you.</strong></p>
                 </div>
             </div>
             <div className="About-Title">
@@ -27,8 +27,8 @@ const About = () => {
                 </div>
                 <div className="boxes">
                     <p className="vision"><a href="https://eclecticlogic.org/Connor">Connor</a></p>
-                    <p>Front-End Developer and Founder</p>
-                    <img className="devpic" alt="Connor" src={require("../images/cs1.jpg")} /> 
+                    <p>Web Developer and Founder</p>
+                    <img className="devpic" alt="Connor" src={require("../images/cs5.jpg")} /> 
                 </div>
                 <div className="boxes">
                     <p className="vision">Colton</p>
